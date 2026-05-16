@@ -52,7 +52,7 @@ Dự án duy trì vai trò Frontend/Backend chuyên trách theo định hướng
 ---
 
 ## 🏗️ Kiến trúc hệ thống
-
+```text
 ┌─────────────────┐        ┌──────────────────┐        ┌─────────────┐
 │   React Client  │◄──────►│  Spring Boot API  │◄──────►│    MySQL    │
 │   (Frontend)    │  HTTP  │    (Backend)      │  JPA   │  Database   │
