@@ -66,8 +66,8 @@ Dự án duy trì vai trò Frontend/Backend chuyên trách theo định hướng
                 └──────────────┘       └───────────────┘
 Yêu cầu hệ thống: Java 17+ | Node.js 18+ | MySQL 8.0+ | Maven 3.8+
 
-1. Clone repository
-git clone [https://github.com/](https://github.com/)<your-org>/ai-study-hub.git
+# 1. Clone repository
+git clone https://github.com/Dota2005/ai-study-hub.git
 cd ai-study-hub
 
 2. Khởi tạo Database
