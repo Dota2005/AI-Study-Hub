@@ -1,114 +1,110 @@
-Nền tảng học tập thông minh hỗ trợ quản lý tài liệu và tương tác AI Chatbot dành cho sinh viên.
+# 📚 AI Study Hub
 
-## 📖 Mô tả dự án
-AI Study Hub là hệ thống hỗ trợ học tập được xây dựng với mục tiêu giúp sinh viên dễ dàng upload, quản lý và tìm kiếm tài liệu học tập, đồng thời tích hợp trợ lý ảo AI Chatbot (thiết kế theo cơ sở Prompt Engineering) để hỗ trợ hỏi đáp kiến thức chuyên ngành hiệu quả.
+> **Vision:** A simplified integration of Google Drive + Studocu + Quizlet + AI Study Assistant.
 
----
-
-## ✨ Tính năng chính
-* 🔐 **Xác thực & Phân quyền** — Đăng ký, đăng nhập, xác thực email; phân quyền Guest / User / Admin.
-* 👤 **Quản lý hồ sơ** — Cập nhật thông tin cá nhân, ảnh đại diện, lịch sử hoạt động.
-* 📤 **Upload tài liệu** — Hỗ trợ PDF, DOCX, PPTX; quét file độc hại; hiển thị trạng thái real-time.
-* 📂 **Quản lý tài liệu** — Chỉnh sửa metadata, xóa mềm (thùng rác), preview, lịch sử chỉnh sửa.
-* 🔍 **Tìm kiếm & Lọc** — Tìm kiếm gần đúng, lọc theo môn học / category / người upload.
-* ☁️ **Cloud Storage** — Lưu trữ an toàn, mã hóa khi truyền tải, backup định kỳ.
-* 🤖 **AI Chatbot** — Trợ lý ảo hỗ trợ học tập, xử lý câu hỏi dựa trên Prompt Engineering trong lĩnh vực tài liệu, lưu lịch sử chat.
-* 🛠️ **Quản trị hệ thống** — Quản lý người dùng, tài liệu, thống kê, cấu hình hệ thống.
+**AI Study Hub** is a centralized learning platform that empowers students to manage, share, and interact with study materials using an AI-powered assistant. The system provides smart document management, collaborative study groups, and automated quiz/flashcard generation to enhance the learning experience.
 
 ---
 
-## 👥 Thành viên nhóm & Phân công công việc
+## 🌟 1. Core Features
 
-Dự án duy trì vai trò Frontend/Backend chuyên trách theo định hướng. Các thành viên phối hợp làm việc chéo (Cross-functional) để xử lý từ Database đến Giao diện, trong đó mỗi người sẽ chịu trách nhiệm chính cho các Business Rules được giao:
+**📂 Document Management & Cloud Storage**
 
-| STT | Họ và Tên | MSSV | Vai trò | Phạm vi công việc (Business Rules) |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | **Nguyễn Đoàn Tâm** | SE196655 | 👑 Leader / Backend | Thiết kế DB, Core API & xử lý API Auth (BR-01 → BR-15) |
-| 2 | **Trần Kiến Quốc** | SE204127 | Backend Developer | API User Profile (BR-16 → BR-20) & Hỗ trợ xử lý logic Data |
-| 3 | **Nguyễn Ngọc Bảo Quân**| SE192897 | Backend Developer | API Doc Upload, Cloud Storage & File Processing (BR-21 → 30, 49 → 55) |
-| 4 | **Mai Minh Quân** | SE204020 | Frontend Developer | Thiết kế UI/UX Doc Management & Search (BR-31 → BR-48) |
-| 5 | **Diệp Khánh Minh** | SE204209 | Frontend Developer | Thiết kế UI/UX AI Chatbot & Tích hợp Prompt API (BR-56 → BR-65) |
-| 6 | **Ngô Quốc Khánh** | SE204180 | Frontend Developer | Thiết kế UI/UX Administration Dashboard (BR-66 → BR-82) |
+* **Upload & Organize:** Support PDF, DOCX, PPTX, TXT, Images, and ZIP. Files are stored securely on **Firebase Storage**, while metadata (title, size, subject) sits in **MySQL**.
+* **Search & Filter:** Find materials instantly by keyword, subject, folder, or file type.
+* **Sharing:** Share specific documents with registered peers via access permissions.
 
----
+**🤖 AI-Powered Learning (GPT / Claude API)**
 
-## 🛠️ Công nghệ sử dụng
+* **Contextual Chatbot:** Ask questions and get answers strictly based on the uploaded document's context.
+* **Smart Generators:** Automatically generate quizzes and flashcards from study materials.
+* **Usage Limits (Freemium):** Daily AI interaction limits for Free users, with higher quotas for Premium users. *(Note: AI chat history is ephemeral in the MVP).*
 
-### 1. Frontend
-* **React & Vite:** Thư viện xây dựng giao diện người dùng và Build tool siêu tốc.
-* **Axios:** HTTP Client giao tiếp với API.
-* **TailwindCSS / MUI:** Styling & UI Components.
+**👥 Collaborative Study Groups**
 
-### 2. Backend
-* **Spring Boot:** Framework Java xây dựng REST API.
-* **Spring Security + JWT:** Xác thực & phân quyền bảo mật.
-* **Spring Data JPA:** ORM tương tác cơ sở dữ liệu.
+* Create or join study groups to share resources.
+* Group members can chat, discuss, and trigger AI assistance directly within the group context *(Group chat history is not stored in the DB for the MVP).*
 
-### 3. Database, Storage & AI
-* **MySQL 8.0+:** Cơ sở dữ liệu quan hệ chính của hệ thống.
-* **Cloud Storage:** Lưu trữ file tài liệu vật lý (AWS S3 / Firebase).
-* **AI / LLM API:** Google Gemini API / OpenAI API (Xử lý hỏi đáp bằng kỹ thuật Prompt Engineering).
+**⚙️ Administration & Security**
+
+* Role-based access control (Guest, User, Premium, Admin).
+* Admin portal to manage users, moderate flagged documents, configure system limits, and view analytics.
 
 ---
 
-## 🏗️ Kiến trúc hệ thống
+## 🛠️ 2. Tech Stack
+
+| Layer | Technology | Tools & Environments |
+| --- | --- | --- |
+| **Frontend** | HTML, CSS, JavaScript | VS Code (Live Server: `http://127.0.0.1:5500`) |
+| **Backend** | Java Spring Boot | IntelliJ IDEA (Port: `http://localhost:8080`) |
+| **Database** | MySQL | Spring Data JPA |
+| **Integrations** | Firebase Storage, OpenAI / Claude API | RESTful APIs, Fetch API |
+
+---
+
+## 🏗️ 3. Project Structure
+
 ```text
-┌─────────────────┐        ┌──────────────────┐        ┌─────────────┐
-│   React Client  │◄──────►│  Spring Boot API  │◄──────►│    MySQL    │
-│   (Frontend)    │  HTTP  │    (Backend)      │  JPA   │  Database   │
-└─────────────────┘        └──────────────────┘        └─────────────┘
-                                    │
-                        ┌───────────┴───────────┐
-                        │                       │
-                ┌───────▼──────┐       ┌────────▼──────┐
-                │ Cloud Storage│       │   AI Service  │
-                │  (Documents) │       │   (Chatbot)   │
-                └──────────────┘       └───────────────┘
-Yêu cầu hệ thống: Java 17+ | Node.js 18+ | MySQL 8.0+ | Maven 3.8+
-
-# 1. Clone repository
-git clone https://github.com/Dota2005/ai-study-hub.git
-cd ai-study-hub
-
-2. Khởi tạo Database
-# Import schema
-mysql -u root -p < backend/src/main/resources/schema.sql
-
-3. Cấu hình Backend
-cd backend
-cp src/main/resources/application.properties.example src/main/resources/application.properties
-# Chỉnh sửa: DB_URL, DB_USERNAME, DB_PASSWORD, JWT_SECRET, LLM_API_KEY...
-mvn spring-boot:run
-
-4. Cấu hình Frontend
-cd frontend
-npm install
-cp .env.example .env
-# Chỉnh sửa: VITE_API_URL=http://localhost:8080
-npm run dev
-
-
-📁 Cấu trúc thư mục
-
 ai-study-hub/
-├── backend/                  # Spring Boot Application
-│   ├── src/main/java/
-│   │   └── com/aistudyhub/
-│   │       ├── controller/   # REST Controllers
-│   │       ├── service/      # Business Logic
-│   │       ├── repository/   # JPA Repositories
-│   │       ├── entity/       # Database Entities
-│   │       ├── dto/          # Data Transfer Objects
-│   │       └── config/       # Security, CORS Config
-│   └── pom.xml
-├── frontend/                 # React Application
-│   ├── src/
-│   │   ├── components/       # UI Components
-│   │   ├── pages/            # Page Views
-│   │   ├── services/         # API Calls
-│   │   ├── hooks/            # Custom Hooks
-│   │   └── utils/            # Helper Functions
-│   └── package.json
-├── docs/                     # Tài liệu dự án
-│   └── business-rules.md
+├── backend/                  # Spring Boot source code
+│   └── src/main/java/com/aistudyhub/
+│       ├── config/           # CORS, Security configs
+│       ├── controller/       # REST API Endpoints (/api/...)
+│       ├── service/          # Business logic
+│       ├── repository/       # Database interactions
+│       └── entity/           # MySQL table mappings
+├── frontend/                 # Vanilla JS, HTML, CSS
+│   ├── css/                  # style.css (Tailwind/Custom)
+│   ├── js/                   # api.js (Centralized API calls), auth.js, etc.
+│   └── *.html                # login, dashboard, upload, etc.
+├── docs/                     # API contracts, ERD, and Git workflows
+├── demo-data/                # Sample files and SQL mock data
 └── README.md
+
+```
+
+---
+
+## 📜 4. Development Standards & Rules
+
+### Backend Contract (`localhost:8080`)
+
+* All endpoints must be prefixed with `/api`.
+* Strict camelCase for JSON fields.
+* **Standardized JSON Response:**
+```json
+{
+  "success": true,
+  "message": "Action completed successfully",
+  "data": { ... }
+}
+
+```
+
+
+
+### Frontend Architecture (`127.0.0.1:5500`)
+
+* **NO hard-coded API URLs** across files. All requests must route through `frontend/js/api.js`.
+* **UI/UX Guidelines:** * *Primary Color:* `#2563eb` (Blue) | *Background:* `#f8fafc` | *Text:* `#1e293b`.
+* *Styling:* Inter font, 8px border-radius, clean card layouts with consistent spacing.
+
+
+
+### Data Flow
+
+`User Action` ➔ `Frontend JS` ➔ `Fetch API` ➔ `Spring Boot REST API` ➔ `MySQL / Firebase / AI API` ➔ `JSON Response` ➔ `UI Update`.
+
+---
+
+## 🌿 5. Git Workflow
+
+We strictly follow a feature-branch workflow to maintain a stable codebase.
+
+* `main`: Production-ready code (DO NOT push directly).
+* `develop`: Active integration branch.
+* `feature/*`: Specific task branches (e.g., `feature/login-ui`, `feature/upload-api`).
+* **Rule:** All merges to `develop` require a **Pull Request (PR)** reviewed by the Leader.
+
+---
