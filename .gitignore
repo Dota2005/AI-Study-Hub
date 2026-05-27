@@ -1,0 +1,32 @@
+# Java / Spring Boot
+target/
+*.class
+*.jar
+*.war
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secret files
+.env
+application-local.properties
+application-secret.properties
+firebase-service-account.json
+
+# Node / frontend optional
+node_modules/
+
+# Local uploaded files
+uploads/
+
+# Maven wrapper build files if needed
+.mvn/wrapper/maven-wrapper.jar
