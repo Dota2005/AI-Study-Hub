@@ -102,3 +102,14 @@ Fields:
     target_id
     reason
     created_at
+
+11. email_otps
+Manage login/ register through email
+Fields:
+    id
+    email
+    otp_code
+    purpose
+    expires_at
+    used
+    created_at
