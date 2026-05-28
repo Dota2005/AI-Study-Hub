@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Study Hub</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">AI Study Hub</h2>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link">Register</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section class="page-header">
+                <h1>Welcome to AI Study Hub</h1>
+                <p>Upload, organize, share, and study documents with AI support.</p>
+            </section>
+
+            <section class="card">
+                <h2>Backend Health Check</h2>
+                <p id="backendStatus" class="status-box status-checking">
+                    Checking backend connection...
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/health.js"></script>
+</body>
+
+</html>
