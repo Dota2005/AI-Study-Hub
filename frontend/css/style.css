@@ -243,3 +243,110 @@ input:focus {
 .helper-text a:hover {
   text-decoration: underline;
 }
+
+/* Error & Success states */
+#registerMessage,
+#loginMessage {
+    min-height: 20px;
+    margin-top: 8px;
+}
+
+.helper-text.error {
+    color: var(--danger);
+}
+
+.helper-text.success {
+    color: var(--success);
+}
+
+/* Input error state */
+input.error {
+    border-color: var(--danger);
+    background-color: #fef2f2;
+}
+
+/* Input success state */
+input.success {
+    border-color: var(--success);
+    background-color: #f0fdf4;
+}
+
+/* Logout Button */
+.logout-container {
+    margin-top: 24px;
+    text-align: right;
+}
+
+.logout-btn {
+    width: auto;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--danger);
+}
+
+.logout-btn:hover {
+    background: #fef2f2;
+}
+
+.logout-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive Stats Grid */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== STATS GRID ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* ===== COMING SOON ===== */
+.coming-soon {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.coming-soon-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.coming-soon-title {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.coming-soon-desc {
+    font-size: 14px;
+    color: var(--muted);
+}
