@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - AI Study Hub</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
     <div class="app-layout">
         <aside class="sidebar">
@@ -20,9 +22,9 @@
         <main class="main-content">
             <section class="page-header">
                 <h1>Dashboard</h1>
-                <p>Welcome back! Here's your study overview.</p>
+                <p id="dashboardUserName">Welcome back! Here's your study overview.</p>
             </section>
-            
+
             <section class="card">
                 <h2>My Stats</h2>
                 <div class="stats-grid">
@@ -40,13 +42,13 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="card coming-soon">
                 <div class="coming-soon-icon">🚀</div>
                 <div class="coming-soon-title">Features coming soon</div>
                 <div class="coming-soon-desc">AI Chat and document features will appear here.</div>
             </section>
-            
+
             <div class="logout-container">
                 <button type="button" id="logoutBtn" class="btn btn-secondary logout-btn">
                     🚪 Logout
@@ -57,5 +59,7 @@
 
     <script src="js/api.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
+
 </html>
