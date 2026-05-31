@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - AI Study Hub</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">AI Study Hub</h2>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link">Register</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="page-header">
+                <h1>Dashboard</h1>
+                <p>Welcome back! Here's your study overview.</p>
+            </section>
+            
+            <section class="card">
+                <h2>My Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">My Documents</div>
+                        <div class="stat-value" id="docCount">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">AI Conversations</div>
+                        <div class="stat-value" id="chatCount">-</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Joined</div>
+                        <div class="stat-value" id="joinDate">-</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card coming-soon">
+                <div class="coming-soon-icon">🚀</div>
+                <div class="coming-soon-title">Features coming soon</div>
+                <div class="coming-soon-desc">AI Chat and document features will appear here.</div>
+            </section>
+            
+            <div class="logout-container">
+                <button type="button" id="logoutBtn" class="btn btn-secondary logout-btn">
+                    🚪 Logout
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

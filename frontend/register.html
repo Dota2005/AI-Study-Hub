@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - AI Study Hub</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">AI Study Hub</h2>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link active">Register</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="page-header">
+                <h1>Create Account</h1>
+                <p>Sign up to start learning with AI Study Hub.</p>
+            </section>
+            <section class="card form-card">
+                <form id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            placeholder="Nguyen Van A" 
+                            required 
+                            autocomplete="name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="user@test.com" 
+                            required 
+                            autocomplete="email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="At least 6 characters" 
+                            required 
+                            autocomplete="new-password"
+                            minlength="6"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            placeholder="Re-enter password" 
+                            required 
+                            autocomplete="new-password"
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <p class="helper-text">
+                        Already have an account? <a href="login.html">Login</a>
+                    </p>
+                    <p id="registerMessage" class="helper-text"></p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Chỉ giữ lại các file JS cần thiết -->
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify OTP - AI Study Hub</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h2 class="logo">AI Study Hub</h2>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link">Register</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="page-header">
+                <h1>Verify Your Email</h1>
+                <p>OTP has been sent to <strong id="displayEmail"></strong></p>
+            </section>
+            <section class="card form-card">
+                <form id="otpForm" novalidate>
+                    <div class="form-group">
+                        <label for="otp">Enter OTP Code</label>
+                        <input 
+                            type="text" 
+                            id="otp" 
+                            placeholder="6-digit code"
+                            maxlength="6" 
+                            inputmode="numeric" 
+                            autocomplete="one-time-code"
+                            required 
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="verifyBtn">Verify</button>
+                    <button type="button" class="btn btn-secondary" id="resendBtn">
+                        Resend OTP
+                    </button>
+                    <p id="countdown" class="helper-text"></p>
+                    <p class="helper-text">
+                        <a href="register.html">← Back to Register</a>
+                    </p>
+                    <p id="otpMessage" class="helper-text"></p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
